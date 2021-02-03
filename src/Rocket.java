@@ -1,3 +1,5 @@
+//Class to calculate rocket time land
+
 public class Rocket {
 
     private final double velocity;
