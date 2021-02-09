@@ -5,7 +5,7 @@ import java.util.*;
 
 //Program to search if a word is present in the dictionary or not
 public class Scrabble {
-    public static boolean wordPresent(String word) {
+    public boolean wordPresent(String word) {
         try {
             Scanner sc = new Scanner(new File("dictionary.txt"));
             while (sc.hasNext()) {
