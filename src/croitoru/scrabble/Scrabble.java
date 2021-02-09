@@ -1,3 +1,5 @@
+package croitoru.scrabble;
+
 import java.io.File;
 import java.util.*;
 
@@ -11,7 +13,7 @@ public class Scrabble {
                 if (currWord.equals(word))
                     return true;
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Sorry, the following error occurred: " + e);
             return false;
         }
