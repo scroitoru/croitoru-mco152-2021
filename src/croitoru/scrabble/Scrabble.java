@@ -14,8 +14,7 @@ public class Scrabble {
                     return true;
             }
         } catch (Exception e) {
-            System.out.println("Sorry, the following error occurred: " + e);
-            return false;
+            e.printStackTrace();
         }
         return false;
     }
