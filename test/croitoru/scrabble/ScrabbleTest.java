@@ -2,18 +2,18 @@ package croitoru.scrabble;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class ScrabbleTest {
     @Test
     public void ifWordThere(){
         Scrabble search = new Scrabble();
-        assertEquals(true, search.wordPresent("and"));
+        assertTrue(search.wordPresent("and"));
     }
 
     @Test
     public void ifWordNotThere(){
         Scrabble search = new Scrabble();
-        assertEquals(false, search.wordPresent("snh"));
+        assertFalse(search.wordPresent("snh"));
     }
 }
