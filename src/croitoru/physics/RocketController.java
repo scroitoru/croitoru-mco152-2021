@@ -2,10 +2,9 @@ package croitoru.physics;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-
-import java.awt.*;
 
 public class RocketController {
     @FXML
@@ -15,7 +14,9 @@ public class RocketController {
     @FXML
     TextField secondsField;
     @FXML
-    private Text actionTarget;
+    Label locationLabel;
+    @FXML
+    RocketCanvas rocketCanvas;
 
 
     public void calculateRocket(ActionEvent actionEvent) {
@@ -24,10 +25,11 @@ public class RocketController {
         double seconds = Double.parseDouble(secondsField.getText());
 
         Rocket rocket = new Rocket(velocity, angle);
-        double xResult = rocket.getX(seconds);
-        double yResult = rocket.getY(seconds);
-        double flightTimeResult = rocket.getFlightTime();
-        actionTarget.setText("X = " + xResult + "\nY= " + yResult +
-                "\nFlight Time = " + flightTimeResult);
+        String location = String.format("(%.2f, %.2f)",
+                rocket.getX(seconds),
+                rocket.getY(seconds));
+        locationLabel.setText(location);
+
+        rocketCanvas.draw(rocket);
     }
 }

@@ -3,7 +3,7 @@ package croitoru.physics;
 //Class to calculate rocket time land
 public class Rocket {
 
-    private static final double GRAVITY = 9.81;
+    private static final double GRAVITY = 9.8;
     private final double velocity;
     private final double angle;
 
@@ -15,7 +15,7 @@ public class Rocket {
 
     /**
      *
-     * @param time
+     * @param time in seconds
      * @return the X location of the rocket at the specified time
      */
     public double getX(double time){
@@ -26,7 +26,7 @@ public class Rocket {
 
     /**
      *
-     * @param time
+     * @param time in seconds
      * @return the Y location of the rocket at the specified time
      */
     public double getY(double time){
@@ -47,6 +47,12 @@ public class Rocket {
         double yVelocity = Math.sin(angle) * velocity; //40.7239
         double flightTime = yVelocity/ (0.5 * GRAVITY);
         return flightTime;
+    }
+
+    public double getHighestY(){
+        double yVelocity = Math.sin(angle) * velocity;
+        double highestY = (yVelocity * yVelocity) / (GRAVITY * 2);
+        return highestY;
     }
 
 }
