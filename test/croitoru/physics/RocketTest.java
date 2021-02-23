@@ -41,4 +41,30 @@ public class RocketTest {
         //then
         Assert.assertEquals(8.311, flightTime, 0.01 );
     }
+
+    @Test
+    public void getY_land(){
+        //given
+        Rocket rocket = new Rocket(71,35);
+
+        //when
+        double y = rocket.getY(8.31);
+
+        //then
+        Assert.assertEquals(84.61, y , 0.01);
+    }
+
+    @Test
+    public void getY_highest(){
+        //given
+        Rocket rocket = new Rocket(71,35);
+        double time = 8.31 / 2.0;
+
+        //when
+        boolean result = rocket.getY(time) > rocket.getY(time + 0.1)
+                && rocket.getY(time) > rocket.getY(time - 0.1);
+
+        //then
+        Assert.assertTrue(result);
+    }
 }
