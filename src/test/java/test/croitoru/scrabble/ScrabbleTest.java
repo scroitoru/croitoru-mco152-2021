@@ -1,5 +1,6 @@
-package croitoru.scrabble;
+package test.croitoru.scrabble;
 
+import croitoru.scrabble.Scrabble;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

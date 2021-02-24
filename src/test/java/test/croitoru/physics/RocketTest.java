@@ -1,5 +1,6 @@
-package croitoru.physics;
+package test.croitoru.physics;
 
+import croitoru.physics.Rocket;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -39,7 +40,7 @@ public class RocketTest {
         double flightTime = rocket.getFlightTime();
 
         //then
-        Assert.assertEquals(8.311, flightTime, 0.01 );
+        Assert.assertEquals(8.31, flightTime, 0.01 );
     }
 
     @Test
@@ -51,7 +52,19 @@ public class RocketTest {
         double y = rocket.getY(8.31);
 
         //then
-        Assert.assertEquals(84.61, y , 0.01);
+        Assert.assertEquals(0, y , 0.1);
+    }
+
+    @Test
+    public void getHighestY(){
+        // given
+        Rocket rocket = new Rocket(71, 35);
+
+        // when
+        double y = rocket.getHighestY();
+
+        // then
+        Assert.assertEquals(84.61, y, 0.01);
     }
 
     @Test
