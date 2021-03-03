@@ -1,21 +1,32 @@
 package croitoru.scrabble;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.*;
 
-//Program to search if a word is present in the dictionary or not
+//Dictionary program for a Scrabble game
 public class Scrabble {
-    public boolean wordPresent(String word) {
-        try {
-            Scanner sc = new Scanner(new File("dictionary.txt"));
-            while (sc.hasNext()) {
-                String currWord = sc.next();
-                if (currWord.equals(word))
-                    return true;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+
+    private final Map<String, String> wordsToDefinitions = new HashMap<>();
+
+    public Scrabble() throws FileNotFoundException{
+        Scanner sc = new Scanner(new FileReader("dictionary.txt"));
+        while (sc.hasNext()){
+            wordsToDefinitions.put(
+                    sc.next(),
+                    sc.nextLine().trim()
+            );
         }
-        return false;
     }
+
+    public boolean wordPresent(String word){
+        return wordsToDefinitions.containsKey(word.toUpperCase());
+    }
+
+    public String getDefinition(String word){
+        String definition = wordsToDefinitions.get(word.toUpperCase());
+        return definition == null ? "" : definition;
+    }
+
 }

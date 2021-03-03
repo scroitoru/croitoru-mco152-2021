@@ -5,13 +5,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
+import java.io.FileNotFoundException;
+
 public class ScrabbleController {
     @FXML
     TextField wordSearchField;
     @FXML
     private Text actionTarget;
 
-    public void wordSearch(ActionEvent actionEvent) {
+    public void wordSearch(ActionEvent actionEvent) throws FileNotFoundException {
         String isWord = wordSearchField.getText();
 
         Scrabble scrabble = new Scrabble();
