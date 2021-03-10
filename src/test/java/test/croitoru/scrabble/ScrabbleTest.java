@@ -1,6 +1,6 @@
 package test.croitoru.scrabble;
 
-import croitoru.scrabble.Scrabble;
+import croitoru.scrabble.ScrabbleDictionary;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
@@ -11,7 +11,7 @@ public class ScrabbleTest {
     @Test
     public void ifWordThere() throws FileNotFoundException {
         //given
-        Scrabble search = new Scrabble();
+        ScrabbleDictionary search = new ScrabbleDictionary();
 
         //when
 
@@ -22,7 +22,7 @@ public class ScrabbleTest {
     @Test
     public void ifWordNotThere() throws FileNotFoundException{
         //given
-        Scrabble search = new Scrabble();
+        ScrabbleDictionary search = new ScrabbleDictionary();
 
         //when
 
@@ -33,7 +33,7 @@ public class ScrabbleTest {
     @Test
     public void getDefinition() throws FileNotFoundException{
         //given
-        Scrabble search = new Scrabble();
+        ScrabbleDictionary search = new ScrabbleDictionary();
 
         //when
 

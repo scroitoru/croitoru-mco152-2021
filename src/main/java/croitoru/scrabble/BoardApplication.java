@@ -8,12 +8,14 @@ import javafx.stage.Stage;
 
 public class BoardApplication extends Application {
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/board_application.fxml"));
 
-        primaryStage.setTitle("Scrabble Board");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
+        Scene scene = new Scene(root, 800, 400);
+
+        stage.setTitle("Scrabble Board");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public static void main(String[] args) { launch(args); }
