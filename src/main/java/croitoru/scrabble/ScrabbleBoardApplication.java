@@ -18,7 +18,7 @@ public class ScrabbleBoardApplication extends Application {
         loader.setController(controller);
 
         Parent parent = loader.load();
-        Scene scene = new Scene(parent, 350, 150);
+        Scene scene = new Scene(parent, 550, 250);
 
         stage.setTitle("Scrabble Board");
         stage.setScene(scene);
