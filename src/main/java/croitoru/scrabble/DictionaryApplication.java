@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class DictionaryApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/scrabble_application.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/dictionary_application.fxml"));
 
         Scene scene = new Scene(root, 800, 400);
 

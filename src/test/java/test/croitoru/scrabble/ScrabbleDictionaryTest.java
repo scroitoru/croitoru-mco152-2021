@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 
 import static org.junit.Assert.*;
 
-public class ScrabbleTest {
+public class ScrabbleDictionaryTest {
     @Test
     public void ifWordThere() throws FileNotFoundException {
         //given
