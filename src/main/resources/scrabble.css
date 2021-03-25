@@ -6,6 +6,7 @@ Label {
     -fx-padding:5 8 5 8;
     -fx-alignment: center;
     -fx-font:28px Helvetica;
+    -fx-border-color:saddlebrown;
 }
 
 Label.points{
@@ -26,6 +27,8 @@ Button{
     -fx-padding:5 8 5 8;
     -fx-text-alignment: center;
     -fx-font:28px Helvetica;
+    -fx-background-color: tan;
+    -fx-border-color:saddlebrown;
 }
 
 Button.controls{
@@ -35,4 +38,6 @@ Button.controls{
     -fx-padding:5 8 5 8;
     -fx-text-alignment: center;
     -fx-font:20px Helvetica;
+    -fx-background-color: none;
+    -fx-border-color:black;
 }

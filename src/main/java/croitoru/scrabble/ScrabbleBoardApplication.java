@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.paint.Color;
+
 
 public class ScrabbleBoardApplication extends Application {
     @Override
@@ -18,7 +20,7 @@ public class ScrabbleBoardApplication extends Application {
         loader.setController(controller);
 
         Parent parent = loader.load();
-        Scene scene = new Scene(parent, 550, 250);
+                Scene scene = new Scene(parent, 550, 250);
 
         stage.setTitle("Scrabble Board");
         stage.setScene(scene);
